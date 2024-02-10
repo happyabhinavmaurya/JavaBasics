@@ -26,7 +26,7 @@ public class ClassesAndObjects {
         }
 
         public void setLastName(String lastName) {
-            this.LastName = lastName;
+            LastName = lastName;
         }
 
         public String getGender() {
@@ -39,8 +39,4 @@ public class ClassesAndObjects {
 
     }
 
-    public static class Sum {
-        int x;
-        int y;
-    }
 }

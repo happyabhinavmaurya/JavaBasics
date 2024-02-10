@@ -1,5 +1,3 @@
-import oops.ClassesAndObjects;
-
 public class Main {
 
     static void printf(String string) {
@@ -7,26 +5,13 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        String[] arr1 = {"Abhinav", "Maurya", "Arpit", "February"};
+        int maxLength = 0;
+        for (int i = 0; i <= arr1.length - 2; i++) {
+            maxLength = Math.max(arr1[i + 1].length(), arr1[i].length());
+        }
 
-        ClassesAndObjects.Info abhinav = new ClassesAndObjects.Info("Abhinav", "Maurya", "Male");
-        ClassesAndObjects.Info arpit = new ClassesAndObjects.Info("Arpit", "Maurya", "Male");
-
-        // abhinav
-        printf("FirstName : " + abhinav.getFirstName());
-        printf("LastName: " + abhinav.getLastName());
-        printf("Gender: " + abhinav.getGender());
-
-        // arpit
-        // set value
-        arpit.setFirstName("Arpit");
-        arpit.setLastName("Maurya");
-        arpit.setGender("Male");
-
-        printf("Firstname: " + arpit.getFirstName());
-        printf("LastName: " + arpit.getLastName());
-        printf("Gender: " + abhinav.getGender());
-
+        System.out.println(maxLength);
 
     }
 
