@@ -1,18 +1,46 @@
+import java.util.Scanner;
+
 public class Main {
 
-    static void printf(String string) {
-        System.out.println(string);
-    }
-
     public static void main(String[] args) {
-        String[] arr1 = {"Abhinav", "Maurya", "Arpit", "February"};
-        int maxLength = 0;
-        for (int i = 0; i <= arr1.length - 2; i++) {
-            maxLength = Math.max(arr1[i + 1].length(), arr1[i].length());
+
+        String str;
+        char ch;
+        double temp = 0.0;
+
+
+        Scanner Keyboard = new Scanner(System.in);
+
+        System.out.print("Enter your expression: ");
+        str = Keyboard.nextLine();
+
+        for (int i = 0; i < str.length(); i++) {
+            ch = Keyboard.next().charAt(0);
+
+            if (ch == '+' || ch == '-' || ch == '*' || ch == '/') {
+                switch (ch) {
+                    case '+':
+                        temp += Keyboard.nextDouble();
+                        break;
+                    case '-':
+                        temp -= Keyboard.nextDouble();
+                        break;
+                    case '*':
+                        temp *= Keyboard.nextDouble();
+                        break;
+                    case '/':
+                        temp /= Keyboard.nextDouble();
+                        break;
+                }
+            } else if (ch == '=') {
+                break;
+            }
+
+
+            temp += ch;
         }
 
-        System.out.println(maxLength);
-
+        System.out.println("Result: " + temp);
     }
 
 }
